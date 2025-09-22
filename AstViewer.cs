@@ -93,9 +93,9 @@ class Program
         stopwatch.Start();
         SyntaxTree tree = CSharpSyntaxTree.ParseText(code);
         var root = tree.GetRoot();
-        stopwatch.Stop();
-        Console.WriteLine($"\nAST parsing execution time: {stopwatch.ElapsedMilliseconds} ms");
         Console.WriteLine("\nAST:");
         PrintTree(root);
+        stopwatch.Stop();
+        Console.WriteLine($"\nAST generation execution time: {stopwatch.ElapsedMilliseconds} ms");
     }
 }
