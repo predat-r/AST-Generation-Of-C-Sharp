@@ -1,34 +1,23 @@
-# Graph Traversal and AST Viewer
+# AST Generation and Time Noting Assignment
 
-This project contains a simple graph traversal implementation (BFS) and an AST viewer using Roslyn.
+**Students:** bcsf22m024, 22, 34
 
-## Prerequisites
+**Assigned Language:** C#
 
-- .NET 8.0 or later SDK installed. Download from [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
+## Task Description
 
-## Setup and Running
+The students were assigned to generate Abstract Syntax Trees (ASTs) for C# code and record their execution times. They decided to focus on graph-related algorithms, specifically:
 
-1. Clone or pull the repository.
+1. A simple graph declaration and DFS (Depth-First Search) code
+2. The same for BFS (Breadth-First Search)
 
-2. Navigate to the project directory.
+## Execution Times
 
-3. Restore NuGet packages:
-   ```
-   dotnet restore
-   ```
+- Parsing time for DFS code: 139ms
+- Parsing time for BFS code: 134ms
 
-4. Run the application:
-   ```
-   dotnet run
-   ```
+## AST Files
 
-5. Choose an option from the menu:
-   - 1: Run BFS Traversal
-   - 2: View AST
-
-## Project Structure
-
-- `Program.cs`: Main menu
-- `GraphTraversal.cs`: Graph and BFS implementation
-- `AstViewer.cs`: AST parsing and printing
-- `.gitignore`: Git ignore file
+You can view the actual ASTs in the following files:
+- [DFS_AST.txt](DFS_AST.txt)
+- [BFS_AST.txt](BFS_AST.txt)
