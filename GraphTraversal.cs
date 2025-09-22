@@ -13,28 +13,26 @@ public class Graph
         adjList[v].Add(u); // Undirected
     }
 
-    public void DFS(int start)
+    public void BFS(int start)
     {
         HashSet<int> visited = new HashSet<int>();
-        Stack<int> stack = new Stack<int>();
-        stack.Push(start);
+        Queue<int> queue = new Queue<int>();
+        queue.Enqueue(start);
+        visited.Add(start);
 
-        while (stack.Count > 0)
+        while (queue.Count > 0)
         {
-            int node = stack.Pop();
-            if (!visited.Contains(node))
-            {
-                visited.Add(node);
-                Console.WriteLine($"Visited: {node}");
+            int node = queue.Dequeue();
+            Console.WriteLine($"Visited: {node}");
 
-                if (adjList.ContainsKey(node))
+            if (adjList.ContainsKey(node))
+            {
+                foreach (int neighbor in adjList[node])
                 {
-                    foreach (int neighbor in adjList[node])
+                    if (!visited.Contains(neighbor))
                     {
-                        if (!visited.Contains(neighbor))
-                        {
-                            stack.Push(neighbor);
-                        }
+                        visited.Add(neighbor);
+                        queue.Enqueue(neighbor);
                     }
                 }
             }
@@ -54,7 +52,7 @@ public class GraphTraversalApp
         g.AddEdge(2, 5);
         g.AddEdge(2, 6);
 
-        Console.WriteLine("DFS Traversal:");
-        g.DFS(0);
+        Console.WriteLine("BFS Traversal:");
+        g.BFS(0);
     }
 }

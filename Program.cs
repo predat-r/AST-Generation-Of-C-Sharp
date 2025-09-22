@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Choose an option:");
-        Console.WriteLine("1. Run DFS Traversal");
+        Console.WriteLine("1. Run BFS Traversal");
         Console.WriteLine("2. View AST");
         string choice = Console.ReadLine();
 
