@@ -9,7 +9,7 @@
 We were assigned to generate Abstract Syntax Trees (ASTs) for C# code and record their execution times. We decided to focus on graph-related algorithms, specifically:
 
 1. A simple graph declaration and DFS (Depth-First Search) code
-2.  A simple graph declaration and BFS (Breadth-First Search)
+2. A simple graph declaration and BFS (Breadth-First Search) code
 
 ## Execution Times
 
@@ -19,5 +19,5 @@ We were assigned to generate Abstract Syntax Trees (ASTs) for C# code and record
 ## AST Files
 
 You can view the actual ASTs in the following files:
-- [DFS_AST.txt](DFS_AST.txt)
-- [BFS_AST.txt](BFS_AST.txt)
+- [DFS_AST.xml](DFS_AST.xml)
+- [BFS_AST.xml](BFS_AST.xml)
